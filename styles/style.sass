@@ -1,0 +1,645 @@
+//##################
+//DEPENDANCIES
+//##################
+
+*
+    font-size: calc(0.6em + 1vh)
+    box-sizing: border-box
+    font-family: 'Open Sans', sans-serif
+
+body
+    margin: 0
+    width: fit-content
+
+main, footer, header
+    width: fit-content
+
+a
+    text-decoration: none
+    color: inherit
+
+button
+    text-transform: uppercase
+
+button:hover
+    cursor: pointer
+
+button:focus
+    outline: none
+
+.underlined-header
+    position: relative
+    font-weight: 700
+    color: black
+    text-transform: uppercase
+    font-size: 2rem
+    text-align: center
+    margin: 0
+    white-space: nowrap
+    &:after
+        position: absolute
+        content: ''
+        height: .25em
+        bottom: -.7em
+
+        margin: 0 auto
+        left: 0
+        right: 0
+        width: 3.5rem
+        background: #333
+        transition: .2s
+
+
+//###################
+//HEADER_MENU
+//###################
+
+.menu-wrapper
+    position: relative
+    background-color: #26233A
+    color: #FFF
+    box-shadow: .1em .1em .2em black
+    
+
+.menu-wrapper__logo
+    width: 11em
+    position: absolute
+    top: 0.3em
+    left: 1em
+
+
+.menu-list
+    width: fit-content
+    margin: 0 auto
+
+.nav
+    margin: 0
+    display: grid
+    grid-template-columns: repeat(6, auto)
+    justify-content: center
+    list-style-type: none
+    z-index: 3
+    
+
+.nav__option 
+    display: block
+    padding: 1.2em 1em
+    font-size: .9rem
+    text-transform: uppercase
+    text-align: center
+    transition: .2s
+
+.nav__option:hover
+    cursor: pointer
+    color: #F1EE0F
+    background-color: #182D80
+
+.nav__option--nowrap
+    white-space: nowrap
+
+//##########################
+//HEADER_INTRODUCTION
+//##########################
+
+.introduce-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    //grid-auto-rows: minmax(75vh, auto)
+    > *
+        padding: 3em
+        
+
+.intro-bg
+    position: relative
+    height: 90vh
+    grid-column: 1/4
+    background-image: url("/images/backgrounds/header_1.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    display: flex
+    justify-content: center
+    align-items: center
+
+.intro-bg-2
+    background-image: url("/images/backgrounds/header_2.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    position: absolute
+    z-index: 2
+    width: 100%
+    height: 100%
+
+.info-box-wrapper
+    position: relative
+    z-index: 3
+    width: fit-content
+    padding: .45em
+    background-color: rgba(#3d3d3c, 0.9)
+    box-shadow: .05em .05em .2em black
+
+.info-box
+    color: #FCFCFC
+    width: fit-content
+    padding: 1.5em 6em
+    border: .063em solid #909090
+    text-align: center
+    text-transform: uppercase
+    h2
+        font-size: .7rem
+        letter-spacing: .2em
+        margin-top: 2em
+    p   
+        font-size: 1.7rem
+        font-weight: 500
+        letter-spacing: .2em
+        margin-top: .4em
+
+.pac-ref
+    font-size: .75rem
+    font-weight: 500
+    padding: .5em
+    border: .15em solid #FCFCFC
+    border-radius: .3em
+    transition-duration: .2s
+
+.pac-ref:hover
+    background-color: #FCFCFC
+    color: #909090
+
+.plain-bg-1
+    background-image: url("/images/backgrounds/header_under_1.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+.about-us-bg
+    width: fit-content
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    background-color: #F8F8F8
+    *
+        background-color: #F8F8F8
+
+.about-info
+    position: relative
+    padding-top: 1.7em
+    h2
+        margin-bottom: 1.5em
+
+.intro-undermark
+    width: fit-content
+    padding: .05em 2em
+    background: grey
+    margin: 0 auto
+
+.intro-text
+    font-size: 1rem
+    text-align: center
+    padding: 1em
+        
+
+.plain-bg-2
+    background-image: url("/images/backgrounds/header_under_2.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+
+//###############
+//FEATURES
+//###############  
+
+.features-wrapper
+    width: 100%
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(215,227,239,1) 100%)
+    position: relative
+    padding: 4em
+    
+.features-content
+    width: fit-content
+    margin: 0 auto
+    padding-top: 4em 
+    h2
+        margin-bottom: 3em
+        
+
+.features-list
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    
+
+.feature
+    border: .005em solid #ebe8e8
+    background: linear-gradient(0deg, rgba(210,235,243,1) 0%, rgba(229,248,251,1) 100%)
+    text-align: center
+    padding: 2em 1em
+    transition: .2s
+    transition-timing-function: ease-in
+    h3
+        font-size: .9rem
+        text-transform: uppercase
+    p
+        font-size: .7rem
+        color: #777777
+        line-height: 2
+    img
+        width: 2em
+
+
+.feature:hover
+    border-bottom: .1em solid black
+    transform: translateY(-1em)
+
+//##############
+//EXPERIENCE
+//##############
+
+.exp-wrapper
+    padding-top: 4em
+    padding-bottom: 4em
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(215,227,239,1) 100%)
+
+.exp-content
+    width: fit-content
+    margin: 0 auto
+    padding: 0 10em
+    padding-bottom: 2em
+    p
+        font-size: .8rem
+        margin-top: 5em
+        text-align: center
+
+.reviews
+    padding-top: 1em
+    display: grid
+    grid-gap: 3em
+    align-items: start
+    margin: 0 auto
+    width: fit-content
+    grid-template-columns: 1fr 1fr
+    
+    
+
+.reviews__field
+    position: relative
+    background: rgba(#FFF, .4)
+    padding: 1.5em 3em
+    box-shadow: .03em .03em .2em grey
+    
+.avatar 
+    position: absolute
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    width: 4em
+    height: 4em
+    top: 50%
+    transform: translateY(-2em)
+    left: -2em
+    border-radius: 50%
+    border: .25em solid #333333
+
+.av_1
+    background-image: url("/images/avatars/dulinec.png")
+
+.av_2
+    background-image: url("/images/avatars/karpechenko.png")
+
+.av_3
+    background-image: url("/images/avatars/samilo.png")
+
+.av_4
+    background-image: url("/images/avatars/navros.png")
+
+.review
+    text-align: justify
+    font-size: .8rem
+    padding-bottom: 2em
+    height: 10em
+    overflow: hidden
+    box-shadow: inset 0 -.5em .3em -.3em rgba(#333, 0.6)
+
+.review--no-shadow
+    box-shadow: none
+
+.button-more
+    position: absolute
+    padding: .3em 2em
+    display: block
+    font-size: .9rem
+    bottom: .5em
+    left: 50%
+    transform: translateX(-5em)
+    border: none
+    background: #D7E3EF
+    transition: .2s
+
+.button-more:hover
+    box-shadow: .1em .1em .2em gray
+
+.button-more:active
+    background: #ECF8FF
+
+.show-hide
+    display: none
+    padding: 0 0
+    font-size: .8rem
+
+//###################
+//FUTURE
+//###################
+
+.future-wrapper
+    background-color: white
+    padding: 5em 0
+
+.future-content
+    position: relative
+    width: fit-content
+    padding: 0 0em
+    margin: 0 auto
+    display: grid
+    grid-gap: 2em
+    grid-template-columns: auto auto
+    padding: 0 5em
+
+.future-note
+    align-self: center
+    p   
+        padding: 0 2em
+        text-align: center
+        margin-top: 4em
+        line-height: 2
+        font-size: .7rem
+
+
+
+.gallery-wrapper
+    position: relative
+    width: fit-content
+    margin: 0 auto
+
+.switch-buttons
+    position: absolute
+    display: flex
+    top: -2em
+    right: .5em
+    width: fit-content
+    > *
+        width: fit-content
+        padding: .1em .4em
+        border: .05em solid #333
+        transition: .2s
+    > *:hover
+        cursor: pointer
+        background-color: #333
+        color: white
+    > * + *
+        margin-left: .4em
+
+
+.gallery-borders
+    position: relative
+    width: 31.5em
+    overflow: hidden
+    justify-self: end
+
+.gallery-images
+    position: relative
+    width: fit-content
+    display: grid
+    justify-content: center
+    align-items: center
+    grid-gap: 1em
+    grid-template-columns: repeat(4, 1fr)
+
+
+.photo
+    display: block
+    width: 15em
+    height: 10em
+    transition: .2s
+
+.photo:hover
+    filter: brightness(40%)
+
+
+//###################
+//DISCIPLINES
+//###################
+
+.disc-wrapper
+    display: grid
+    grid-template-columns: 1.3fr 2fr
+    
+
+.lamp-wrapper
+    background-image: url("/images/backgrounds/lamp2.jpg")
+    background-size: cover
+    background-position: center
+    
+
+.disc-content
+    padding: 2em
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%)
+    > h2
+        margin: 2em 0
+        text-align: left
+        &::after
+            margin-left: 0
+
+.disc-grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 1em
+
+.disc-description
+    background: #BBBBBB
+    box-shadow: .1em .1em .3em black
+    transition: .3s
+    border-left: .12em solid black
+    padding: 1em
+    h3
+        text-transform: uppercase
+        font-size: .7rem
+        
+    ul 
+        list-style-type: square
+        font-size: .6rem
+
+.disc-description:hover
+    border-left: .12em solid rgba(black, 0)
+
+//#################
+//REQ(REQUIREMENTS)
+//#################
+
+.req-wrapper
+    background-color: white
+    padding: 3em 1em 1em 1em
+    border-top: .05em solid black
+    border-bottom: .05em solid black
+
+.req-content
+    width: fit-content
+    margin: 0 auto
+
+.req-text
+    margin-top: 2.5em
+    font-size: .9rem
+    font-weight: bold
+    text-align: center
+    line-height: 2
+
+//#################
+//FOOTER
+//#################
+
+
+    
+.footer-wrapper
+    width: 100%
+    padding: 3em 0
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%)
+
+.footer-content
+    width: fit-content
+    margin: 0 auto
+
+.footer-grid
+
+    margin-top: 3em
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    justify-content: center
+
+.footer-infoblock
+    text-align: center
+    padding: 1.5em
+    h4
+        font-weight: 400
+        text-transform: uppercase
+        font-size: .8rem
+    p
+        font-size: .8rem
+        font-weight: bold
+
+.infoblock--center
+    border-left: .05em solid black
+    border-right: .05em solid black
+
+
+.infoblock-icon
+    width: 2.5em
+    height: 2.5em
+
+    
+
+//###################
+//ADDITIONAL
+//###################
+
+#return-to-top 
+    z-index: 10
+    position: fixed
+    bottom: 20px
+    right: 20px
+    background: rgb(0, 0, 0)
+    background: rgba(0, 0, 0, 0.7)
+    width: 50px
+    height: 50px
+    display: block
+    text-decoration: none
+    border-radius: 35px
+    display: none
+    transition: all 0.3s ease
+
+#return-to-top i 
+    color: #fff
+    margin: 0
+    position: relative
+    left: 16px
+    top: 13px
+    font-size: 19px
+    transition: all 0.3s ease
+
+#return-to-top:hover 
+    background: rgba(0, 0, 0, 0.9)
+
+#return-to-top:hover i 
+    color: #fff
+    top: 5px
+
+//#################
+//MEDIA QUERIES
+//##################
+
+@media (max-width: 1650px)
+    .menu-wrapper__logo
+        width: 8em
+        top: .7em
+
+    
+@media (max-width: 1450px)
+    .menu-wrapper__logo
+        display: none
+    .reviews
+        grid-template-columns: 1fr
+    .future-content
+        grid-template-columns: 1fr
+
+@media (max-width: 1400px)
+    .nav__option
+        font-size: .7rem
+        padding: 1em .7em
+    .introduce-wrapper
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr
+    
+@media (max-width: 1220px)
+    .disc-grid
+        grid-template-columns: 1fr
+
+@media (max-width: 1050px)
+    .exp-content
+        padding: 0 5em
+
+@media (max-width: 880px)
+    .nav
+        grid-template-columns: repeat(3, auto)
+    .nav__option
+        text-align: left
+        font-size: 1rem
+    .plain-bg-1, .plain-bg-2
+        display: none
+    .about-us-bg
+        grid-column: 1/4
+    
+@media (max-width: 840px)
+    .disc-wrapper
+        display: block
+    .feature > p
+        font-size: .9rem
+    .lamp-wrapper
+        display: none
+    .disc-content
+        padding-left: 5em
+        padding-right: 5em
+    .features-list
+        grid-template-columns: 1fr
+    .feature:hover
+        border-bottom: .005em solid black
+    .gallery-borders
+        width: 15em
+
+@media (max-width: 680px)
+    .info-box
+        padding: 1em 3em
+
+    
+
+    
+
+
+
